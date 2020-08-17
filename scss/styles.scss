@@ -1,0 +1,274 @@
+// body{
+//     background-color: #00ffff;
+// }
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+
+$dark-color: #232B3D;
+$btn-color: #1E2A5A;
+$blue: #18BBB6;
+$white: #ffffff;
+$grey: #c4c4c4c4;
+$yellow: #F7B354;
+$font: 'Baloo Tamma 2',
+cursive;
+
+* {
+    margin: 0;
+    padding: 0;
+    //overflow-x: hidden;
+}
+
+body {
+    background-image: url(/images/image1.png);
+    font: $font;
+}
+
+
+.wrapper {
+    background: #fff;
+
+}
+
+.votes {
+    background-color: $dark-color;
+    margin: 2rem;
+    position: relative;
+    top: 1rem;
+    padding: 1rem;
+
+    .votes--text {
+        text-align: center;
+        color: $white;
+
+        h1 {
+            font-size: .8rem;
+            letter-spacing: .2rem;
+        }
+
+        span {
+            display: block;
+            font-size: 3rem;
+            padding-bottom: 1rem;
+            color: darken($white, 20);
+        }
+    }
+}
+
+// progress bar
+
+.progress {
+    border-radius: 50px;
+
+    .progress-bar {
+        background-color: $yellow;
+    }
+
+    @media screen and (min-width:700px) {
+        width: 50%;
+        margin: 0 auto;
+
+    }
+}
+
+// the image section
+
+.grid {
+    margin: 3rem 0;
+    padding-bottom: 3rem;
+
+    @media screen and (min-width:700px) {
+        margin: 0 3rem;
+         display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card-box {
+    // border: 1px solid red;
+    margin: .3rem;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
+    box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
+
+    @media screen and (min-width:700px) {
+        .flex {
+            padding: .5rem;
+        }
+    }
+
+
+
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+
+    .flex-side-two {
+        padding-left: 2rem;
+    }
+
+    h6 {
+        padding: .5rem 0;
+    }
+}
+
+img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.flex-btns {
+    border: 1px solid $grey;
+    // width: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    #hm-vote {
+        margin: 0 1rem;
+        font-weight: bold;
+
+        input {
+            width: 1rem;
+            margin-left: .2rem;
+            border: none;
+            margin-top: .3rem;
+        }
+    }
+
+    button {
+        background-color: $white;
+        border: 1px solid $grey;
+
+        &:focus {
+            outline-color: $grey;
+
+        }
+    }
+
+    i {
+        padding: .5rem;
+    }
+
+}
+
+// buttons
+
+.view-btn-div{
+   position: relative;
+   bottom: 3rem;
+display: flex;
+justify-content: center;
+
+@media screen and (min-width: 700px){
+    bottom: 1rem;
+}
+}
+
+.myButton {
+   
+	background-color:$btn-color;
+	border-radius:12px;
+	display:inline-block;
+	cursor:pointer;
+	color:$white;
+	font-size:1rem;
+	padding: 1rem 3rem;
+	text-decoration:none;
+}
+.myButton:hover {
+    background-color:$white;
+    border: 2px solid $btn-color;
+    color: $btn-color;
+    text-decoration:none;
+}
+
+// error div
+
+.error{
+    color: red;
+}
+
+.error.vt{
+    display: flex;
+    justify-content: center;
+}
+
+ .error.lbd{   
+    position: relative;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+
+    @media screen and(min-width: 700px) {
+        bottom: 0;
+    }
+   
+}
+
+
+// leader board
+.leaderboard{
+
+    margin-top:2rem;
+
+    h1 {
+        padding: 1rem;
+        font-size: 1.5rem;
+        //letter-spacing: .2rem;
+        text-align: center;
+    }
+
+    .card-lb{
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
+    box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
+    padding: 1rem;
+    }
+
+    .grid-lb{
+        margin: 2rem 0;
+        padding-bottom: 2rem;
+
+        @media screen and (min-width:700px){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .flex-lb{
+        display: flex;
+        justify-content: space-evenly;
+
+        .flex-name{
+            margin-top: 1rem;
+        }
+
+        .score-num{
+            //border: 1px solid red;
+            background-color: $btn-color;
+            color: $white;
+            font-weight: bolder;
+            padding-left: 1.2rem;
+            padding-top: .7rem;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+        }
+    }
+
+    .eviction-notice{
+        display: flex;
+        justify-content: center;
+        color: $blue;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .go-back{
+        bottom: 1rem;
+    }
+}
