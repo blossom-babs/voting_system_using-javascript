@@ -100,8 +100,7 @@ img {
   font-weight: bold;
 }
 .flex-btns #hm-vote input {
-  width: 1rem;
-  margin-left: 0.2rem;
+  width: 2rem;
   border: none;
   margin-top: 0.3rem;
 }
