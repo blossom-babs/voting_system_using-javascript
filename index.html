@@ -2,207 +2,203 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voting System</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/b527bec78a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- <script src="/src/script.js"></script> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+  <script src="https://kit.fontawesome.com/b527bec78a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
 
-        <div id="vote-pg" class="wrapper">
-            <div class="votes">
-                <div class="votes--text">
-                    <h1>My Available Votes</h1>
-                    <span id="available-vote">100</span>
-                    <div class="progress">
-                        <div id="progressbar" class="progress-bar" role="progressbar" style="width: 100%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <p class="d-none error vt">Maximum number of votes exceeded.</p>
-
-            <div class="grid">
-                <div class="card-box">
-                    <div class="flex">
-                        <div><img src="/images/dorathy.jpg" alt=""></div>
-                        <div class="flex-side-two">
-                            <h6>Dorathy</h6>
-                            <div class="flex-btns">
-                                <button id="decrease-H1-vote"><i class="fas fa-minus"></i></button>
-                                <span id="hm-vote"><input id="h1-vote-oup" type="text" value="0" id=""></span>
-                                <button id="increase-H1-vote"><i class="fas fa-plus"></i></button>
-                            </div>
-                            <!-- this is where it could stay though -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-box">
-                    <div class="flex">
-                        <div> <img src="/images/erica.jpg" alt=""></div>
-                        <div class="flex-side-two">
-                            <h6>Erica</h6>
-                            <div class="flex-btns">
-                                <button id="decr-h2"><i class="fas fa-minus"></i></button>
-                                <span id="hm-vote"><input id="h2-vote-oup" type="text" value=0 id=""></span>
-                                <button id="incr-h2"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-box">
-                    <div class="flex">
-                        <div> <img src="/images/laycon.jpg" alt=""></div>
-                        <div class="flex-side-two">
-                            <h6>Laycon</h6>
-                            <div class="flex-btns">
-                                <button id="decr-h3"><i class="fas fa-minus"></i></button>
-                                <span id="hm-vote"><input id="h3-vote-oup" type="text" value=0 id=""></span>
-                                <button id="incr-h3"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-box">
-                    <div class="flex">
-                        <div> <img src="/images/kiddwaya.jpg" alt=""></div>
-                        <div class="flex-side-two">
-                            <h6>Kiddwaya</h6>
-                            <div class="flex-btns">
-                                <button id="decr-h4"><i class="fas fa-minus"></i></button>
-                                <span id="hm-vote"><input id="h4-vote-oup" type="text" value=0 id=""></span>
-                                <button id="incr-h4"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-box">
-                    <div class="flex">
-                        <div> <img src="/images/ozo.png" alt=""></div>
-                        <div class="flex-side-two">
-                            <h6>Ozo</h6>
-                            <div class="flex-btns">
-                                <button id="decr-h5"><i class="fas fa-minus"></i></button>
-                                <span id="hm-vote"><input id="h5-vote-oup" type="text" value=0 id=""></span>
-                                <button id="incr-h5"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-box">
-                    <div class="flex">
-                        <div> <img src="/images/nengi.png" alt=""></div>
-                        <div class="flex-side-two">
-                            <h6>Nengi</h6>
-                            <div class="flex-btns">
-                                <button id="decr-h6"><i class="fas fa-minus"></i></button>
-                                <span id="hm-vote"><input id="h6-vote-oup" type="text" value=0 id=""></span>
-                                <button id="incr-h6"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-            <div class="view-btn-div">
-                <a id="go-to-lb" href="#" class="myButton">View LeaderBoard <a>
-            </div>
-            <p class='d-none error lbd'>* Finish the votes</p>
-
-
-
+    <div id="vote-pg" class="wrapper">
+      <div class="votes">
+        <div class="votes--text">
+          <h1>My Available Votes</h1>
+          <span id="available-vote">10</span>
+          <div class="progress">
+            <div id="progressbar" class="progress-bar" role="progressbar" style="width: 100%"></div>
+          </div>
         </div>
-        <!--div wrapper ending-->
+      </div>
 
-        <!-- my leaderboard should go here -->
+      <p id="vt" class="d-none error vt">Maximum number of votes exceeded.</p>
 
-        <div id="leaderbd" class="d-none wrapper leaderboard">
-            <div>
-                <h1>Leaderboard</h1>
+      <div class="grid">
+        <div class="card-box">
+          <div class="flex">
+            <div><img src="/images/dorathy.png" alt=""></div>
+            <div class="flex-side-two">
+              <h6>Dorathy</h6>
+              <div class="flex-btns">
+                <button id="decrease-H1-vote"><i class="fas fa-minus"></i></button>
+                <span id="hm-vote"><input id="h1-vote-oup" type="text" value="0" id=""></span>
+                <button id="increase-H1-vote"><i class="fas fa-plus"></i></button>
+              </div>
+              <!-- this is where it could stay though -->
             </div>
-            <div class="grid-lb">
-                <div class="card-lb">
-                    <div class="flex-lb">
-                        <img src="./images/dorathy.jpg" alt="">
-                        <h6 class="flex-name">Dorathy</h6>
-                        <div class="score-num">1</div>
-                    </div>
-                </div>
-                <div class="card-lb">
-                    <div class="flex-lb">
-                        <img src="./images/dorathy.jpg" alt="">
-                        <h6 class="flex-name">Dorathy</h6>
-                        <div class="score-num">2</div>
-                    </div>
-                </div>
-                <div class="card-lb">
-                    <div class="flex-lb">
-                        <img src="./images/dorathy.jpg" alt="">
-                        <h6 class="flex-name">Dorathy</h6>
-                        <div class="score-num">3</div>
-                    </div>
-                </div>
-                <div class="card-lb">
-                    <div class="flex-lb">
-                        <img src="./images/dorathy.jpg" alt="">
-                        <h6 class="flex-name">Dorathy</h6>
-                        <div class="score-num">4</div>
-                    </div>
-                </div>
-                <div class="card-lb">
-                    <div class="flex-lb">
-                        <img src="./images/dorathy.jpg" alt="">
-                        <h6 class="flex-name">Dorathy</h6>
-                        <div class="score-num">5</div>
-                    </div>
-                </div>
-                <div class="card-lb">
-                    <div class="flex-lb">
-                        <img src="./images/dorathy.jpg" alt="">
-                        <h6 class="flex-name">Dorathy</h6>
-                        <div class="score-num">6</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="eviction-notice">
-                <p> <span id="evicted">Dorathy was evicted</span></p>
-            </div>
-            <div id="go-to-vote" class="view-btn-div go-back">
-                <a href="#" class="myButton">Back to Vote <a>
-            </div>
+          </div>
         </div>
-    </div> <!-- div container closing -->
-    
-    <script src="/src/app.js"></script>
-    <!-- <script src="/src/source.js"></script>
-    <script src="/src/script.js"></script> -->
 
-    <script src="/src/index.js"></script>
+        <div class="card-box">
+          <div class="flex">
+            <div> <img src="/images/erica.jpg" alt=""></div>
+            <div class="flex-side-two">
+              <h6>Erica</h6>
+              <div class="flex-btns">
+                <button id="decr-h2"><i class="fas fa-minus"></i></button>
+                <span id="hm-vote"><input id="h2-vote-oup" type="text" value=0 id=""></span>
+                <button id="incr-h2"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box">
+          <div class="flex">
+            <div> <img src="/images/laycon.jpg" alt=""></div>
+            <div class="flex-side-two">
+              <h6>Laycon</h6>
+              <div class="flex-btns">
+                <button id="decr-h3"><i class="fas fa-minus"></i></button>
+                <span id="hm-vote"><input id="h3-vote-oup" type="text" value=0 id=""></span>
+                <button id="incr-h3"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box">
+          <div class="flex">
+            <div> <img src="/images/kiddwaya.jpg" alt=""></div>
+            <div class="flex-side-two">
+              <h6>Kiddwaya</h6>
+              <div class="flex-btns">
+                <button id="decr-h4"><i class="fas fa-minus"></i></button>
+                <span id="hm-vote"><input id="h4-vote-oup" type="text" value=0 id=""></span>
+                <button id="incr-h4"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box">
+          <div class="flex">
+            <div> <img src="/images/ozo.jpg" alt=""></div>
+            <div class="flex-side-two">
+              <h6>Ozo</h6>
+              <div class="flex-btns">
+                <button id="decr-h5"><i class="fas fa-minus"></i></button>
+                <span id="hm-vote"><input id="h5-vote-oup" type="text" value=0 id=""></span>
+                <button id="incr-h5"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box">
+          <div class="flex">
+            <div> <img src="/images/nengi.png" alt=""></div>
+            <div class="flex-side-two">
+              <h6>Nengi</h6>
+              <div class="flex-btns">
+                <button id="decr-h6"><i class="fas fa-minus"></i></button>
+                <span id="hm-vote"><input id="h6-vote-oup" type="text" value=0 id=""></span>
+                <button id="incr-h6"><i class="fas fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="view-btn-div">
+        <a id="go-to-lb" href="#" class="myButton">View LeaderBoard <a>
+      </div>
+      <p id="lbd" class='d-none error lbd'>* Finish the votes</p>
+
+
+
+    </div>
+    <!--div wrapper ending-->
+
+    <!-- my leaderboard should go here -->
+
+    <div id="leaderbd" class="d-none wrapper leaderboard">
+      <div>
+        <h1>Leaderboard</h1>
+      </div>
+      <div class="grid-lb">
+        <div class="card-lb">
+          <div class="flex-lb">
+            <img src="./images/dorathy.jpg" alt="">
+            <h6 class="flex-name">Dorathy</h6>
+            <div class="score-num">1</div>
+          </div>
+        </div>
+        <div class="card-lb">
+          <div class="flex-lb">
+            <img src="./images/dorathy.jpg" alt="">
+            <h6 class="flex-name">Dorathy</h6>
+            <div class="score-num">2</div>
+          </div>
+        </div>
+        <div class="card-lb">
+          <div class="flex-lb">
+            <img src="./images/dorathy.jpg" alt="">
+            <h6 class="flex-name">Dorathy</h6>
+            <div class="score-num">3</div>
+          </div>
+        </div>
+        <div class="card-lb">
+          <div class="flex-lb">
+            <img src="./images/dorathy.jpg" alt="">
+            <h6 class="flex-name">Dorathy</h6>
+            <div class="score-num">4</div>
+          </div>
+        </div>
+        <div class="card-lb">
+          <div class="flex-lb">
+            <img src="./images/dorathy.jpg" alt="">
+            <h6 class="flex-name">Dorathy</h6>
+            <div class="score-num">5</div>
+          </div>
+        </div>
+        <div class="card-lb">
+          <div class="flex-lb">
+            <img src="./images/dorathy.jpg" alt="">
+            <h6 class="flex-name">Dorathy</h6>
+            <div class="score-num">6</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="eviction-notice">
+        <p> <span id="evicted">Dorathy was evicted</span></p>
+      </div>
+      <div id="go-to-vote" class="view-btn-div go-back">
+        <a href="#" class="myButton">Back to Vote <a>
+      </div>
+    </div>
+  </div> <!-- div container closing -->
+
+  <script src="/src/index.js"></script>
+  <!-- <script src="/src/app.js"></script> -->
 </body>
 
 </html>
