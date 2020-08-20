@@ -2,6 +2,7 @@ class voteSys {
   constructor() {
     this.availableVote = document.getElementById('available-vote')
     this.parentBoard = document.getElementById('leaderboard-card')
+    this.evicted = document.getElementById('eviction-div')
     this.dashboard = document.getElementById('go-to-lb')
     this.progressBar = document.getElementById('progressbar')
     this.inputs = document.querySelectorAll('input')
@@ -158,20 +159,20 @@ class voteSys {
       </div>
       `
     this.parentBoard.appendChild(divEl)
-    this.append()
-
-  }
-
-  append() {
     let divOl = document.createElement('div')
     divOl.classList.add('eviction-notice')
 
     divOl.innerHTML = `
-    <p> <span id="evicted">${this.users[6].name} was evicted</span></p>
+    <p> <span id="evicted">${this.users[5].name} was evicted</span></p>
     `
 
-    this.parentBoard.appendChild(divOl)
+    this.evicted.appendChild(divOl)
+
   }
+
+  // append() {
+
+  // }
 
 }
 
@@ -188,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
   goToVote.addEventListener('click', () => {
     vote_sys.parentBoard.innerHTML = ``
   })
-  //const vs = new voteSys()
 
   btn.addEventListener('click', () => {
 
@@ -200,14 +200,10 @@ document.addEventListener('DOMContentLoaded', () => {
     //   }, 4000)
     // }
 
-    if (vote_sys.availableVote.textContent > 0) {
-      lbd.classList.remove('d-none')
-      console.log(lbd)
-    }
-
     vote_sys.getVoteCuml()
     console.log(`after we fell`);
 
   })
+
 
 });
