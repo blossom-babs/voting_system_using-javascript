@@ -20,14 +20,17 @@ body {
   top: 1rem;
   padding: 1rem;
 }
+
 .votes .votes--text {
   text-align: center;
   color: #ffffff;
 }
+
 .votes .votes--text h1 {
-  font-size: 0.8rem;
-  letter-spacing: 0.2rem;
+  font-size: .8rem;
+  letter-spacing: .2rem;
 }
+
 .votes .votes--text span {
   display: block;
   font-size: 3rem;
@@ -38,9 +41,11 @@ body {
 .progress {
   border-radius: 50px;
 }
+
 .progress .progress-bar {
   background-color: #F7B354;
 }
+
 @media screen and (min-width: 700px) {
   .progress {
     width: 50%;
@@ -52,6 +57,7 @@ body {
   margin: 3rem 0;
   padding-bottom: 3rem;
 }
+
 @media screen and (min-width: 700px) {
   .grid {
     margin: 0 3rem;
@@ -61,14 +67,13 @@ body {
 }
 
 .card-box {
-  margin: 0.3rem;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
+  margin: .3rem;
   box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
 }
+
 @media screen and (min-width: 700px) {
   .card-box .flex {
-    padding: 0.5rem;
+    padding: .5rem;
   }
 }
 
@@ -77,11 +82,13 @@ body {
   justify-content: center;
   padding: 2rem;
 }
+
 .flex .flex-side-two {
   padding-left: 2rem;
 }
+
 .flex h6 {
-  padding: 0.5rem 0;
+  padding: .5rem 0;
 }
 
 img {
@@ -95,29 +102,35 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
 .flex-btns #hm-vote {
   margin: 0 1rem;
   font-weight: bold;
 }
+
 .flex-btns #hm-vote input {
   width: 2rem;
   border: none;
   text-align: center;
-  margin-top: 0.3rem;
+  margin-top: .3rem;
 }
+
 .flex-btns #hm-vote input:focus {
   border-color: #ffffff;
   outline-color: #ffffff;
 }
+
 .flex-btns button {
   background-color: #ffffff;
   border: 1px solid #c4c4c4c4;
 }
+
 .flex-btns button:focus {
   outline-color: #c4c4c4c4;
 }
+
 .flex-btns i {
-  padding: 0.5rem;
+  padding: .5rem;
 }
 
 .view-btn-div {
@@ -126,6 +139,7 @@ img {
   display: flex;
   justify-content: center;
 }
+
 @media screen and (min-width: 700px) {
   .view-btn-div {
     bottom: 1rem;
@@ -165,6 +179,7 @@ img {
   display: flex;
   justify-content: center;
 }
+
 @media screen and (min-width: 700px) {
   .error.lbd {
     bottom: 0;
@@ -174,44 +189,50 @@ img {
 .leaderboard {
   margin-top: 2rem;
 }
+
 .leaderboard h1 {
   padding: 1rem;
   font-size: 1.5rem;
   text-align: center;
 }
+
 .leaderboard .card-lb {
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
   box-shadow: 10px 10px 5px 0px rgba(201, 183, 183, 0.41);
   padding: 1rem;
 }
+
 .leaderboard .grid-lb {
   margin: 2rem 0;
   padding-bottom: 2rem;
 }
+
 @media screen and (min-width: 700px) {
   .leaderboard .grid-lb {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 .leaderboard .flex-lb {
   display: flex;
   justify-content: space-evenly;
 }
+
 .leaderboard .flex-lb .flex-name {
   margin-top: 1rem;
 }
+
 .leaderboard .flex-lb .score-num {
   background-color: #1E2A5A;
   color: #ffffff;
   font-weight: bolder;
   padding-left: 1.2rem;
-  padding-top: 0.7rem;
+  padding-top: .7rem;
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
 }
+
 .leaderboard .eviction-notice {
   display: flex;
   justify-content: center;
@@ -220,8 +241,8 @@ img {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
+
 .leaderboard .go-back {
   bottom: 1rem;
 }
-
 /*# sourceMappingURL=styles.css.map */
