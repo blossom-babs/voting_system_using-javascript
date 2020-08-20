@@ -6,24 +6,18 @@ function eventListeners() {
   const vs = new voteSys()
 
   goToLB.addEventListener('click', () => {
-
-    vs.getVoteCuml()
-
     leaderBdPage.classList.remove('d-none')
     votePage.classList.add('d-none')
+    vs.getVoteCuml()
 
   })
 
   goToVote.addEventListener('click', () => {
     leaderBdPage.classList.add('d-none')
     votePage.classList.remove('d-none')
-
+    vs.getInputs()
+    vs.getDecr()
   })
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  const vote_sys = new voteSys()
-  vote_sys.getInputs()
-  vote_sys.getDecr()
-  eventListeners();
-})
+
+}

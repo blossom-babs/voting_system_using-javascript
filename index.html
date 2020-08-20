@@ -128,7 +128,7 @@
 
 
       <div class="view-btn-div">
-        <a id="go-to-lb" href="#" class="myButton">View LeaderBoard <a>
+        <a id="go-to-lb" href="#" class="myButton" data-toggle="modal" data-target="#exampleModal">View LeaderBoard <a>
       </div>
       <p id="lbd" class='d-none error lbd'>* Finish the votes</p>
 
@@ -139,66 +139,45 @@
 
     <!-- my leaderboard should go here -->
 
-    <div id="leaderbd" class="d-none wrapper leaderboard">
-      <div>
-        <h1>Leaderboard</h1>
-      </div>
-      <div class="grid-lb">
-        <div class="card-lb">
-          <div class="flex-lb">
-            <img src="./images/dorathy.jpg" alt="">
-            <h6 class="flex-name">Dorathy</h6>
-            <div class="score-num">1</div>
-          </div>
-        </div>
-        <div class="card-lb">
-          <div class="flex-lb">
-            <img src="./images/dorathy.jpg" alt="">
-            <h6 class="flex-name">Dorathy</h6>
-            <div class="score-num">2</div>
-          </div>
-        </div>
-        <div class="card-lb">
-          <div class="flex-lb">
-            <img src="./images/dorathy.jpg" alt="">
-            <h6 class="flex-name">Dorathy</h6>
-            <div class="score-num">3</div>
-          </div>
-        </div>
-        <div class="card-lb">
-          <div class="flex-lb">
-            <img src="./images/dorathy.jpg" alt="">
-            <h6 class="flex-name">Dorathy</h6>
-            <div class="score-num">4</div>
-          </div>
-        </div>
-        <div class="card-lb">
-          <div class="flex-lb">
-            <img src="./images/dorathy.jpg" alt="">
-            <h6 class="flex-name">Dorathy</h6>
-            <div class="score-num">5</div>
-          </div>
-        </div>
-        <div class="card-lb">
-          <div class="flex-lb">
-            <img src="./images/dorathy.jpg" alt="">
-            <h6 class="flex-name">Dorathy</h6>
-            <div class="score-num">6</div>
-          </div>
-        </div>
-      </div>
 
-      <div class="eviction-notice">
-        <p> <span id="evicted">Dorathy was evicted</span></p>
-      </div>
-      <div id="go-to-vote" class="view-btn-div go-back">
-        <a href="#" class="myButton">Back to Vote <a>
+    <!-- <div class="eviction-notice">
+          <p> <span id="evicted">Dorathy was evicted</span></p>
+        </div>
+        <div id="go-to-vote" class="view-btn-div go-back">
+          <a href="#" class="myButton">Back to Vote <a>
+        </div>
+      </div> -->
+
+
+    <div id="exampleModal" class="modal fade leaderboard">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+          <p id="lbd" class='d-none' style="color: red; border: 3px solid blue;">* Finish the votes</p>
+          <div>
+            <h1>Leaderboard</h1>
+          </div>
+
+
+          <div id="leaderboard-card">
+            <!-- <div class="grid-lb"></div> -->
+          </div>
+          <!-- <div class="eviction-notice">
+            <p> <span id="evicted">Dorathy was evicted</span></p>
+          </div> -->
+        </div>
+        <div id="go-to-vote" data-dismiss="modal" class="view-btn-div">
+          <a href="#" class="myButton">Back to Vote <a>
+        </div>
       </div>
     </div>
-  </div> <!-- div container closing -->
 
-  <script src="/src/index.js"></script>
+  </div>
+
+  </div> <!-- div container closing -->
   <!-- <script src="/src/app.js"></script> -->
+  <script src="/src/index.js"></script>
+
 </body>
 
 </html>
