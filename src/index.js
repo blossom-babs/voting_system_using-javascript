@@ -177,6 +177,8 @@ class voteSys {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
   const vote_sys = new voteSys()
 
   vote_sys.getInputs()
@@ -186,24 +188,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const lbd = document.getElementById('lbd')
   const goToVote = document.getElementById('go-to-vote')
 
-  goToVote.addEventListener('click', () => {
-    vote_sys.parentBoard.innerHTML = ``
-  })
+  vote_sys.parentBoard.removeChild(vote_sys.divEl)
+  console.log(vote_sys.parentBoard)
+  vote_sys.evicted.removeChild(vote_sys.divOl)
+
 
   btn.addEventListener('click', () => {
+    if (vote_sys.availableVote.textContent > 0) {
+      lbd.classList.remove('d-none')
+    } else {
+      lbd.classList.add('d-none')
+      vote_sys.getVoteCuml()
 
-    // if (this.availableVote.textContent > 0) {
-    //   this.lbd.classList.remove('d-none')
-    //   const selfLbd = this
-    //   setTimeout(() => {
-    //     selfLbd.lbd.classList.add('d-none')
-    //   }, 4000)
-    // }
-
-    vote_sys.getVoteCuml()
-    console.log(`after we fell`);
+    }
 
   })
-
 
 });

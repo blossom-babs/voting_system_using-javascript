@@ -45,7 +45,7 @@
               <h6>Dorathy</h6>
               <div class="flex-btns">
                 <button id="decrease-H1-vote"><i class="fas fa-minus"></i></button>
-                <span id="hm-vote"><input id="h1-vote-oup" type="text" value="0" id=""></span>
+                <span id="hm-vote"><input id="h1-vote-oup" type="text" value="0" id="" disabled></span>
                 <button id="increase-H1-vote"><i class="fas fa-plus"></i></button>
               </div>
               <!-- this is where it could stay though -->
@@ -60,7 +60,7 @@
               <h6>Erica</h6>
               <div class="flex-btns">
                 <button id="decr-h2"><i class="fas fa-minus"></i></button>
-                <span id="hm-vote"><input id="h2-vote-oup" type="text" value=0 id=""></span>
+                <span id="hm-vote"><input id="h2-vote-oup" type="text" value=0 id="" disabled></span>
                 <button id="incr-h2"><i class="fas fa-plus"></i></button>
               </div>
             </div>
@@ -74,7 +74,7 @@
               <h6>Laycon</h6>
               <div class="flex-btns">
                 <button id="decr-h3"><i class="fas fa-minus"></i></button>
-                <span id="hm-vote"><input id="h3-vote-oup" type="text" value=0 id=""></span>
+                <span id="hm-vote"><input id="h3-vote-oup" type="text" value=0 id="" disabled></span>
                 <button id="incr-h3"><i class="fas fa-plus"></i></button>
               </div>
             </div>
@@ -88,7 +88,7 @@
               <h6>Kiddwaya</h6>
               <div class="flex-btns">
                 <button id="decr-h4"><i class="fas fa-minus"></i></button>
-                <span id="hm-vote"><input id="h4-vote-oup" type="text" value=0 id=""></span>
+                <span id="hm-vote"><input id="h4-vote-oup" type="text" value=0 id="" disabled></span>
                 <button id="incr-h4"><i class="fas fa-plus"></i></button>
               </div>
             </div>
@@ -102,7 +102,7 @@
               <h6>Ozo</h6>
               <div class="flex-btns">
                 <button id="decr-h5"><i class="fas fa-minus"></i></button>
-                <span id="hm-vote"><input id="h5-vote-oup" type="text" value=0 id=""></span>
+                <span id="hm-vote"><input id="h5-vote-oup" type="text" value=0 id="" disabled></span>
                 <button id="incr-h5"><i class="fas fa-plus"></i></button>
               </div>
             </div>
@@ -116,7 +116,7 @@
               <h6>Nengi</h6>
               <div class="flex-btns">
                 <button id="decr-h6"><i class="fas fa-minus"></i></button>
-                <span id="hm-vote"><input id="h6-vote-oup" type="text" value=0 id=""></span>
+                <span id="hm-vote"><input id="h6-vote-oup" type="text" value=0 id="" disabled></span>
                 <button id="incr-h6"><i class="fas fa-plus"></i></button>
               </div>
             </div>
@@ -130,9 +130,6 @@
       <div class="view-btn-div">
         <a id="go-to-lb" href="#" class="myButton" data-toggle="modal" data-target="#exampleModal">View LeaderBoard <a>
       </div>
-      <p id="lbd" class='d-none error lbd'>* Finish the votes</p>
-
-
 
     </div>
     <!--div wrapper ending-->
@@ -152,13 +149,10 @@
     <div id="exampleModal" class="modal fade leaderboard">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
-
-          <p id="lbd" class='d-none' style="color: red; border: 3px solid blue;">* Finish the votes</p>
           <div>
             <h1>Leaderboard</h1>
           </div>
-
-
+          <p id="lbd" class='d-none error lbd'>* Finish the votes</p>
           <div id="leaderboard-card">
             <!-- <div class="grid-lb"></div> -->
           </div>
