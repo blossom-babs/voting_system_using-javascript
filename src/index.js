@@ -50,7 +50,19 @@ class voteSys {
     ]
   }
 
+  // getTypedValues() {
+  //   for (let i = 0; i < this.inputs.length; i++) {
+  //     this.inputs[i].addEventListener('keyup', () => {
+  //       console.log(this.inputs[i].value)
+  //       this.remainingVote = this.totalVote()
+  //       this.availableVote.textContent = Number(this.remainingVote) - 1
 
+  //       let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
+  //       this.progressBar.style.width = `${calculatons}%`
+  //     })
+
+  //   }
+  // }
 
   getInputs() {
     for (let i = 0; i < this.plusBtns.length; i++) {
@@ -169,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   vote_sys.getInputs()
   vote_sys.getDecr()
+  //vote_sys.getTypedValues()
 
   const btn = document.getElementById('go-to-lb')
   const lbd = document.getElementById('lbd')

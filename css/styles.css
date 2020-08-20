@@ -242,7 +242,14 @@ img {
   margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 100px) {
+  .leaderboard .eviction-notice {
+    position: relative;
+    top: 1rem;
+  }
+}
+
 .leaderboard .go-back {
-  bottom: 1rem;
+  top: -2rem;
 }
 /*# sourceMappingURL=styles.css.map */
