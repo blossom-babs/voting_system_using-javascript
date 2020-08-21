@@ -188,9 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const lbd = document.getElementById('lbd')
   const goToVote = document.getElementById('go-to-vote')
 
-  vote_sys.parentBoard.removeChild(vote_sys.divEl)
-  console.log(vote_sys.parentBoard)
-  vote_sys.evicted.removeChild(vote_sys.divOl)
+  // vote_sys.parentBoard.removeChild(vote_sys.divEl)
+  // console.log(vote_sys.parentBoard)
+  // vote_sys.evicted.removeChild(vote_sys.divOl)
 
 
   btn.addEventListener('click', () => {
