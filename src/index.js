@@ -50,19 +50,34 @@ class voteSys {
     ]
   }
 
-  // getTypedValues() {
-  //   for (let i = 0; i < this.inputs.length; i++) {
-  //     this.inputs[i].addEventListener('keyup', () => {
-  //       console.log(this.inputs[i].value)
-  //       this.remainingVote = this.totalVote()
-  //       this.availableVote.textContent = Number(this.remainingVote) - 1
+  getTypedValues() {
+    this.inputs.forEach((item, index) => {
+      item.addEventListener('input', () => {
+        console.log(item.value, index)
+        console.log(index)
+        let inputVal = item.value
 
-  //       let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
-  //       this.progressBar.style.width = `${calculatons}%`
-  //     })
+        this.remainingVote = this.totalVote()
+        this.availableVote.textContent = Number(this.remainingVote) - Number(inputVal)
 
-  //   }
-  // }
+        let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
+        this.progressBar.style.width = `${calculatons}%`
+
+        if (item.value == '') {
+          this.remainingVote = this.totalVote()
+          console.log(inputVal)
+          this.availableVote.textContent = Number(this.remainingVote) + inputVal
+
+          let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
+          this.progressBar.style.width = `${calculatons}%`
+        }
+
+
+
+      })
+    })
+
+  }
 
   getInputs() {
     for (let i = 0; i < this.plusBtns.length; i++) {
@@ -72,7 +87,7 @@ class voteSys {
           this.remainingVote = this.totalVote()
           this.availableVote.textContent = Number(this.remainingVote) - 1
 
-          let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
+          let calculatons = (Number(this.availableVote.textContent)) * 100 / 50
           this.progressBar.style.width = `${calculatons}%`
           // this.voteCuml[i] = this.inputs[i].value
           this.users[i].votes = Number(this.inputs[i].value)
@@ -104,7 +119,7 @@ class voteSys {
           this.remainingVote = this.totalVote()
           this.availableVote.textContent = Number(this.remainingVote) + 1
 
-          let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
+          let calculatons = (Number(this.availableVote.textContent)) * 100 / 50
           this.progressBar.style.width = `${calculatons}%`
         }
       })
