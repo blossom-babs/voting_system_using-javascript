@@ -1,8 +1,6 @@
 class voteSys {
   constructor() {
     this.availableVote = document.getElementById('available-vote')
-    this.parentBoard = document.getElementById('leaderboard-card')
-    this.evicted = document.getElementById('eviction-div')
     this.dashboard = document.getElementById('go-to-lb')
     this.progressBar = document.getElementById('progressbar')
     this.inputs = document.querySelectorAll('input')
@@ -52,7 +50,19 @@ class voteSys {
     ]
   }
 
+  // getTypedValues() {
+  //   for (let i = 0; i < this.inputs.length; i++) {
+  //     this.inputs[i].addEventListener('keyup', () => {
+  //       console.log(this.inputs[i].value)
+  //       this.remainingVote = this.totalVote()
+  //       this.availableVote.textContent = Number(this.remainingVote) - 1
 
+  //       let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
+  //       this.progressBar.style.width = `${calculatons}%`
+  //     })
+
+  //   }
+  // }
 
   getInputs() {
     for (let i = 0; i < this.plusBtns.length; i++) {
@@ -102,106 +112,90 @@ class voteSys {
   }
 
   getVoteCuml() {
-    // this.dashboard.addEventListener('click', () => {
+    this.img1Id = document.getElementById('img1')
+    this.img2Id = document.getElementById('img2')
+    this.img3Id = document.getElementById('img3')
+    this.img4Id = document.getElementById('img4')
+    this.img5Id = document.getElementById('img5')
+    this.img6Id = document.getElementById('img6')
+
+    this.name1 = document.getElementById('name1')
+    this.name2 = document.getElementById('name2')
+    this.name3 = document.getElementById('name3')
+    this.name4 = document.getElementById('name4')
+    this.name5 = document.getElementById('name5')
+    this.name6 = document.getElementById('name6')
+
+    this.scoreNum1 = document.getElementById('scoreNum1')
+    this.scoreNum2 = document.getElementById('scoreNum2')
+    this.scoreNum3 = document.getElementById('scoreNum3')
+    this.scoreNum4 = document.getElementById('scoreNum4')
+    this.scoreNum5 = document.getElementById('scoreNum5')
+    this.scoreNum6 = document.getElementById('scoreNum6')
+
+
+    this.evicted = document.getElementById('evicted')
+
     let indexScore = this.users
     let sortingByVotes = indexScore.sort((a, b) => b.votes - a.votes)
-    console.log(sortingByVotes)
+    console.log(sortingByVotes);
 
-    let divEl = document.createElement('div')
-    divEl.classList.add('grid-lb')
-    divEl.innerHTML = `
-    <div class='card-lb'>
-      <div class='flex-lb'>
-      <img src=${this.users[0].img} alt="">
-      <h6 class="flex-name">${this.users[0].name}</h6>
-      <div class="score-num">1</div>
-      </div>
-      </div>
+    // for (let u = 0; u < sortingByVotes.length; u++){
+    //   this.img1Id.src = `${this.users[u].img}`
+    //   this.name1.innerHTML = `${this.users[u].name}`
+    //   this.scoreNum1.innerHTML = `${this.users[u].votes}`
+    // }
 
-      <div class='card-lb'>
-      <div class='flex-lb'>
-      <img src=${this.users[1].img} alt="">
-      <h6 class="flex-name">${this.users[1].name}</h6>
-      <div class="score-num">2</div>
-      </div>
-      </div>
+    this.img1Id.src = `${this.users[0].img}`
+    this.name1.innerHTML = `${this.users[0].name}`
+    this.scoreNum1.innerHTML = `${this.users[0].votes}`
 
-      <div class='card-lb'>
-      <div class='flex-lb'>
-      <img src=${this.users[2].img} alt="">
-      <h6 class="flex-name">${this.users[2].name}</h6>
-      <div class="score-num">3</div>
-      </div>
-      </div>
+    this.img2Id.src = `${this.users[1].img}`
+    this.name2.innerHTML = `${this.users[1].name}`
+    this.scoreNum2.innerHTML = `${this.users[1].votes}`
 
-      <div class='card-lb'>
-      <div class='flex-lb'>
-      <img src=${this.users[3].img} alt="">
-      <h6 class="flex-name">${this.users[3].name}</h6>
-      <div class="score-num">4</div>
-      </div>
-      </div>
+    this.img3Id.src = `${this.users[2].img}`
+    this.name3.innerHTML = `${this.users[2].name}`
+    this.scoreNum3.innerHTML = `${this.users[2].votes}`
 
-      <div class='card-lb'>
-      <div class='flex-lb'>
-      <img src=${this.users[4].img} alt="">
-      <h6 class="flex-name">${this.users[4].name}</h6>
-      <div class="score-num">5</div>
-      </div>
-      </div>
+    this.img4Id.src = `${this.users[3].img}`
+    this.name4.innerHTML = `${this.users[3].name}`
+    this.scoreNum4.innerHTML = `${this.users[3].votes}`
 
-      <div class='card-lb'>
-      <div class='flex-lb'>
-      <img src=${this.users[5].img} alt="">
-      <h6 class="flex-name">${this.users[5].name}</h6>
-      <div class="score-num">6</div>
-      </div>
-      </div>
-      `
-    this.parentBoard.appendChild(divEl)
-    let divOl = document.createElement('div')
-    divOl.classList.add('eviction-notice')
+    this.img5Id.src = `${this.users[4].img}`
+    this.name5.innerHTML = `${this.users[4].name}`
+    this.scoreNum5.innerHTML = `${this.users[4].votes}`
 
-    divOl.innerHTML = `
-    <p> <span id="evicted">${this.users[5].name} was evicted</span></p>
-    `
+    this.img6Id.src = `${this.users[5].img}`
+    this.name6.innerHTML = `${this.users[5].name}`
+    this.scoreNum6.innerHTML = `${this.users[5].votes}`
 
-    this.evicted.appendChild(divOl)
+    this.evicted.textContent = `${this.users[5].name}`
 
   }
-
-  // append() {
-
-  // }
 
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
-
   const vote_sys = new voteSys()
 
   vote_sys.getInputs()
   vote_sys.getDecr()
+  //vote_sys.getTypedValues()
 
   const btn = document.getElementById('go-to-lb')
   const lbd = document.getElementById('lbd')
-  const goToVote = document.getElementById('go-to-vote')
-
-  // vote_sys.parentBoard.removeChild(vote_sys.divEl)
-  // console.log(vote_sys.parentBoard)
-  // vote_sys.evicted.removeChild(vote_sys.divOl)
-
+  const leaderboard = document.getElementById('leaderboard-card')
 
   btn.addEventListener('click', () => {
     if (vote_sys.availableVote.textContent > 0) {
       lbd.classList.remove('d-none')
     } else {
       lbd.classList.add('d-none')
+      leaderboard.classList.remove('d-none')
+      en.classList.remove('d-none')
       vote_sys.getVoteCuml()
-
     }
-
   })
 
-});
+})

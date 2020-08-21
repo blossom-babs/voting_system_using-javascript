@@ -129,23 +129,14 @@
 
       <div class="view-btn-div">
         <a id="go-to-lb" href="#" class="myButton" data-toggle="modal" data-target="#exampleModal">View LeaderBoard <a>
+            <a>
       </div>
 
     </div>
     <!--div wrapper ending-->
 
+
     <!-- my leaderboard should go here -->
-
-
-    <!-- <div class="eviction-notice">
-          <p> <span id="evicted">Dorathy was evicted</span></p>
-        </div>
-        <div id="go-to-vote" class="view-btn-div go-back">
-          <a href="#" class="myButton">Back to Vote <a>
-        </div>
-      </div> -->
-
-
     <div id="exampleModal" class="modal fade leaderboard">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -153,18 +144,67 @@
             <h1>Leaderboard</h1>
           </div>
           <p id="lbd" class='d-none error lbd'>* Finish the votes</p>
-          <div id="leaderboard-card">
+          <div id="leaderboard-card" class="d-none grid-lb">
+            <div class='card-lb'>
+              <div class='flex-lb'>
+                <img id="img1" src="" alt="">
+                <h6 id="name1" class="flex-name"></h6>
+                <div id="scoreNum1" class="score-num"></div>
+              </div>
+            </div>
+
+            <div class='card-lb'>
+              <div class='flex-lb'>
+                <img id="img2" src="" alt="">
+                <h6 id="name2" class="flex-name"></h6>
+                <div id="scoreNum2" class="score-num">2</div>
+              </div>
+            </div>
+
+            <div class='card-lb'>
+              <div class='flex-lb'>
+                <img id="img3" src="" alt="">
+                <h6 id="name3" class="flex-name"></h6>
+                <div id="scoreNum3" class="score-num">3</div>
+              </div>
+            </div>
+
+            <div class='card-lb'>
+              <div class='flex-lb'>
+                <img id="img4" src="" alt="">
+                <h6 id="name4" class="flex-name"></h6>
+                <div id="scoreNum4" class="score-num">4</div>
+              </div>
+            </div>
+
+            <div class='card-lb'>
+              <div class='flex-lb'>
+                <img id="img5" src="" alt="">
+                <h6 id="name5" class="flex-name"></h6>
+                <div id="scoreNum5" class="score-num">5</div>
+              </div>
+            </div>
+
+            <div class='card-lb'>
+              <div class='flex-lb'>
+                <img id="img6" src="" alt="">
+                <h6 id="name6" class="flex-name"></h6>
+                <div id="scoreNum6" class="score-num">6</div>
+              </div>
+            </div>
             <!-- <div class="grid-lb"></div> -->
           </div>
-          <div id="eviction-div">
-            <!-- <div class="eviction-notice">
-            <p> <span id="evicted">Dorathy was evicted</span></p>
-          </div> -->
+
+          <div id="en" class="d-none eviction-notice">
+            <p> <span id="evicted"></span> was evicted</p>
           </div>
+
+
+          <button data-dismiss="modal" class="btn btn-lg btn-primary go-back">Back to Vote </button>
         </div>
-        <div id="go-to-vote" data-dismiss="modal" class="view-btn-div">
-          <a href="#" class="myButton">Back to Vote <a>
-        </div>
+        <!-- <div id="go-to-vote" class="view-btn-div go-back">
+          <a href="#" class="myButton"><a>
+        </div> -->
       </div>
     </div>
 

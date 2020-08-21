@@ -172,6 +172,7 @@ img {
 }
 
 .leaderboard {
+  height: 100%;
   margin-top: 2rem;
 }
 .leaderboard h1 {
@@ -221,7 +222,16 @@ img {
   margin-bottom: 1rem;
 }
 .leaderboard .go-back {
-  bottom: 1rem;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: #1E2A5A;
+  border-color: #1E2A5A;
+}
+@media screen and (max-width: 800px) {
+  .leaderboard .go-back {
+    margin-bottom: 3rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

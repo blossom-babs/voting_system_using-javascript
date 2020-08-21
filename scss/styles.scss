@@ -218,7 +218,7 @@ img {
 
 // leader board
 .leaderboard {
-
+  height: 100%;
   margin-top: 2rem;
 
   h1 {
@@ -281,9 +281,21 @@ img {
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+
+
   }
 
   .go-back {
-    bottom: 1rem;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-color: $btn-color;
+    border-color: $btn-color;
+
+    @media screen and (max-width: 800px) {
+      margin-bottom: 3rem;
+    }
   }
+
+
 }
