@@ -1,12 +1,19 @@
+// I am trying to work on getting the input value: so this is what I am to do
+/*
+1. have a variable that gets all the vote count
+2. get the inputs
+3. if i want to add an error message to each of them, I would have to add the span to each line
+*/
+
 class voteSys {
   constructor() {
     this.availableVote = document.getElementById('available-vote')
     this.dashboard = document.getElementById('go-to-lb')
     this.progressBar = document.getElementById('progressbar')
     this.inputs = document.querySelectorAll('input')
-    this.plusBtns = document.querySelectorAll('.fa-plus')
-    this.minusBtns = document.querySelectorAll('.fa-minus')
-    this.vt = document.getElementById('vt')
+    this.plusBtns = document.querySelectorAll('.plus')
+    this.minusBtns = document.querySelectorAll('.minus')
+    this.vt = document.querySelectorAll('.vt')
     this.lbd = document.getElementById('lbd')
     this.voteCuml = {}
     this.currVal = 0
@@ -53,9 +60,10 @@ class voteSys {
   getTypedValues() {
     this.inputs.forEach((item, index) => {
       item.addEventListener('input', () => {
-        console.log(item.value, index)
-        console.log(index)
+        // console.log(item.value, index)
+        console.log(item.value)
         let inputVal = item.value
+        console.log(inputVal)
 
         this.remainingVote = this.totalVote()
         this.availableVote.textContent = Number(this.remainingVote) - Number(inputVal)
@@ -63,14 +71,14 @@ class voteSys {
         let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
         this.progressBar.style.width = `${calculatons}%`
 
-        if (item.value == '') {
-          this.remainingVote = this.totalVote()
-          console.log(inputVal)
-          this.availableVote.textContent = Number(this.remainingVote) + inputVal
+        // if (item.value == '') {
+        //   this.remainingVote = this.totalVote()
+        //   console.log(inputVal)
+        //   this.availableVote.textContent = Number(this.remainingVote) + inputVal
 
-          let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
-          this.progressBar.style.width = `${calculatons}%`
-        }
+        //   let calculatons = (Number(this.availableVote.textContent)) * 100 / 10
+        //   this.progressBar.style.width = `${calculatons}%`
+        // }
 
 
 
@@ -91,15 +99,15 @@ class voteSys {
           this.progressBar.style.width = `${calculatons}%`
           // this.voteCuml[i] = this.inputs[i].value
           this.users[i].votes = Number(this.inputs[i].value)
-
         } else {
-          this.plusBtns[i].disabled = true
-          this.vt.classList.remove('d-none')
+          this.vt[i].classList.remove('d-none')
           const self = this
           setTimeout(() => {
-            self.vt.classList.add('d-none')
+            self.vt[i].classList.add('d-none')
           }, 4000)
         }
+
+        //getVoteLabel[i].innerHTML = "Excess vote";
 
       })
     }
@@ -196,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   vote_sys.getInputs()
   vote_sys.getDecr()
-  //vote_sys.getTypedValues()
+  vote_sys.getTypedValues()
 
   const btn = document.getElementById('go-to-lb')
   const lbd = document.getElementById('lbd')

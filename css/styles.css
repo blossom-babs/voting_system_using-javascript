@@ -85,8 +85,8 @@ body {
 }
 
 img {
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
 }
 
@@ -112,12 +112,10 @@ img {
 .flex-btns button {
   background-color: #ffffff;
   border: 1px solid #c4c4c4c4;
+  padding: 0 0.5rem;
 }
 .flex-btns button:focus {
   outline-color: #c4c4c4c4;
-}
-.flex-btns i {
-  padding: 0.5rem;
 }
 
 .view-btn-div {
@@ -144,9 +142,8 @@ img {
 }
 
 .myButton:hover {
-  background-color: #ffffff;
-  border: 2px solid #1E2A5A;
-  color: #1E2A5A;
+  background-color: #1E2A5A;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -168,6 +165,11 @@ img {
 @media screen and (min-width: 700px) {
   .error.lbd {
     bottom: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .error.lbd {
+    bottom: -1rem;
   }
 }
 
@@ -232,6 +234,9 @@ img {
   .leaderboard .go-back {
     margin-bottom: 3rem;
   }
+}
+.leaderboard .go-back:hover {
+  background-color: #1E2A5A;
 }
 
 /*# sourceMappingURL=styles.css.map */
